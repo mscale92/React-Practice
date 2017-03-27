@@ -49,3 +49,4 @@ Temporary Items
 #npm files and env files
 node_modules/
 .env
+/src/js/app-bundle.js*
