@@ -22,6 +22,11 @@ If the URL is /user/:username then the User component will be displayed.
 
     After declaring our React class component, we need to have something to render in the DOM aka make our html tags!
     The render function holds all html elements
+
+    So what's going on in the render? Well since this is our main page, we're just going to create a layout shell that will be applied across all other pages,
+    these other pages are referred to as this.props.children.
+    Our App is our root component or first parent component, this means that all other routes will start with the same html tags. 
+    This is great for layouts! No need to repeat!! All other components within this Route will have the same header!
 */ 
 var App = React.createClass({
     // The render declaration renders the html code, this is where all xml takes place in the JSX,
@@ -33,8 +38,8 @@ var App = React.createClass({
             <div className="main-page">
                 <header className="main-header">
                     <h1>Lots of Dots</h1>
-                    <main>
-                        
+                    <main className="main-content">
+                        {this.props.children}
                     </main>
                 </header>
             </div>
@@ -46,11 +51,3 @@ var App = React.createClass({
 module.exports = App;
 
 
-/*<div className="main-app">
-                <header className="main-header">
-                    <h1><Link to="/">React GitHub Project</Link></h1>
-                </header>
-                <main className="main-content">
-                    {this.props.children}
-                </main>
-            </div>*/ 
