@@ -1,24 +1,22 @@
 module.exports = {
-  context: __dirname + "/src",
-
-  entry: "./js/app.js",
-
-  output: {
-    filename: "./src/js/app-bundle.js",
-  },
-  resolve: {
-    extensions: ['', '.js', '.jsx', '.json']
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loaders: ["babel-loader"]
-      }
-    ]
-  }
-};
+    entry: './src/js/app.js',
+    output: {
+        filename: './src/js/app-bundle.js'
+    },
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.jsx?/,
+                loader: 'babel',
+                exclude: /node_modules/
+            }
+        ]
+    },
+    devtool: 'sourcemap'
+}
 
 /*What is going on above?
     context - tells webpack where our files will be located
