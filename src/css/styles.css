@@ -8,3 +8,11 @@ html{box-sizing:border-box;}*,*:before,*:after{box-sizing:inherit;}
 body{
 	background: orange;
 }
+
+.main-page{
+	background: blue;
+}
+
+.dots-page{
+	background: pink;
+}

@@ -1,6 +1,6 @@
 var React = require('react');
 var Link = require('react-router').Link;
-// Don't forget your link!
+// Don't forget your link if you want to create a constant hyperlink!
 
 /*
 Ziad's notes
@@ -38,10 +38,10 @@ var App = React.createClass({
             <div className="main-page">
                 <header className="main-header">
                     <h1>Lots of Dots</h1>
-                    <main className="main-content">
-                        {this.props.children}
-                    </main>
                 </header>
+                <main className="main-content">
+                        {this.props.children}
+                </main>
             </div>
         );
     }
