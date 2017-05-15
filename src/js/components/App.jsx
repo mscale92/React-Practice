@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 import DotButton from './Accessories/Button';
 
 // Don't forget your link if you want to create a constant hyperlink!
@@ -34,6 +34,7 @@ class App extends Component{
     // The render declaration renders the html code, this is where all xml takes place in the JSX,
     //before the render function is where all the JS logic, like AJAX calls, calculations, etc, takes place
     //ALWAYS! remember to return your render, otherwise nothing will render.
+    
 
     render() {
         return (

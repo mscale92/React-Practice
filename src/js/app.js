@@ -19,6 +19,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import App from './components/App';
 import Dots from './components/Dots';
+import WelcomePage from './components/WelcomePage';
 
 // var App = require('./components/App');
 // var Dots = require('./components/Dots');
@@ -27,6 +28,7 @@ import Dots from './components/Dots';
 const routes = (
 	<Router history={browserHistory}>
         <Route path="/" component={App}>
+        	<IndexRoute component={WelcomePage}/>
         	<Route path="/dots" component={Dots}/>
         </Route>
     </Router>

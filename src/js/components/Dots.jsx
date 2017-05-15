@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 // Don't forget your link if you want to create a constant hyperlink!
 
 
@@ -48,6 +48,13 @@ class Dots extends Component{
 			dotColorUrl : dotImgUrlString
 		});
 
+	}
+
+	_dots(){
+		//This was to be used in a Link tag but it still won't rerender the component. For now, I'll stick with an
+		//anchor tag, TODO: Get Link to rerender the component
+		browserHistory.push('/');
+		browserHistory.push('/dots');
 	}
 	render() {
 		return (
