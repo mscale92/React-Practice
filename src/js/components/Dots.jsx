@@ -35,7 +35,7 @@ class Dots extends Component{
 
 	_dots(){
 		//This was to be used in a Link tag but it still won't rerender the component. For now, I'll stick with an
-		//anchor tag, TODO: Get Link to rerender the component
+		//anchor tag, TODO: Get Link to rerender the component or work with an onclick to call the functions again!
 		browserHistory.push('/');
 		browserHistory.push('/dots');
 	}
