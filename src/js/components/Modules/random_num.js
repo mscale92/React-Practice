@@ -1,7 +1,7 @@
 //Function that determines the random grid position!
 
 module.exports = {
- gridPostion(){
+ gridPosition(){
  	var randomNumForPosition = Math.floor(Math.random() * 9);
 
  	return "pos" + randomNumForPosition;
@@ -29,7 +29,7 @@ module.exports = {
 		}
 
 		dotImgUrlString = "/files/imgs/" + nameOfColor + "_dot.jpg";
-		console.log(dotImgUrlString, "img url string");
+		//console.log(dotImgUrlString, "img url string");
 		return dotImgUrlString;
  }
   

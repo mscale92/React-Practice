@@ -8,7 +8,8 @@ class Dots extends Component{
 	constructor(props) {
     	super(props);
     	this.state = {
-    		dotColorUrl: ""
+    		dotColorUrl: "",
+    		dotPosition: ""
     	}
 	}
 	// getInitialState: function() {
@@ -21,11 +22,13 @@ class Dots extends Component{
 		//It's sometimes nice not to have to make an AJAX call, or count for that matter, just refresh
 
 
-		var dotStringUrl = RandomNum.colorOfDot()
+		var dotStringUrl = RandomNum.colorOfDot();
+		var dotStringPos = RandomNum.gridPosition();
 
 		//Once we have our value, let's set it in our state!
 		this.setState({
-			dotColorUrl : dotStringUrl
+			dotColorUrl : dotStringUrl,
+			dotPosition: dotStringPos
 		});
 
 	}
@@ -42,7 +45,7 @@ class Dots extends Component{
 				<h2>Go go go</h2>
 				<h3>Click the Dot!</h3>
 				<div className="container">
-					<a href="/dots" className="pos1"><img src={this.state.dotColorUrl} alt="big dot"/></a>
+					<a href="/dots" className={this.state.dotPosition}><img src={this.state.dotColorUrl} alt="big dot"/></a>
 				</div>
 			</div>
 		);
