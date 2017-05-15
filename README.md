@@ -1,7 +1,7 @@
-# React-Practice
-Practicing react 
+# React-Practice Dots
 
-This is repo for dusting off a few cobwebs with React. The master branch contains the environment while the various branches will show different web designs with React.
-I am keeping the master clean so that I can easily experiment with React.
+This branch focuses on a small React app that uses CSS Grid.
 
-Applause for JSX!
+It uses three different dot images and a random number generator. The user clicks on a dot and then the position and dot color are randomly determined.
+
+The design, at present moment of May 2017, is simple, but functions well.
