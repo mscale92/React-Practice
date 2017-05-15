@@ -1,5 +1,7 @@
-var React = require('react');
-var Link = require('react-router').Link;
+import React, { Component } from 'react';
+import { Link } from 'react-router';
+import DotButton from './Accessories/Button';
+
 // Don't forget your link if you want to create a constant hyperlink!
 
 /*
@@ -28,26 +30,27 @@ If the URL is /user/:username then the User component will be displayed.
     Our App is our root component or first parent component, this means that all other routes will start with the same html tags. 
     This is great for layouts! No need to repeat!! All other components within this Route will have the same header!
 */ 
-var App = React.createClass({
+class App extends Component{
     // The render declaration renders the html code, this is where all xml takes place in the JSX,
     //before the render function is where all the JS logic, like AJAX calls, calculations, etc, takes place
     //ALWAYS! remember to return your render, otherwise nothing will render.
 
-    render: function() {
+    render() {
         return (
             <div className="main-page">
                 <header className="main-header">
                     <h1>Lots of Dots</h1>
                 </header>
                 <main className="main-content">
+
                         {this.props.children}
                 </main>
             </div>
         );
     }
-});
+};
 
 // Export your component
-module.exports = App;
+export default App;
 
 

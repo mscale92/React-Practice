@@ -3,13 +3,19 @@ var Link = require('react-router').Link;
 // Don't forget your link if you want to create a constant hyperlink!
 
 
-var Dots = React.createClass({
-	getInitialState: function() {
-		//Always set the initial state, even if it's just an empty object in order to prevent errors!
-		//In this instance, we need a value for our variable, specifically a string value for our url. Lets just go with zero!
-		return { dotColorUrl: ""};
-	},
-	componentWillMount: function(){
+class Dots extends Component {
+	constructor(props) {
+    	super(props);
+    	this.state = {
+    		dotColorUrl: ""
+    	}
+	}
+	// getInitialState: function() {
+	// 	//Always set the initial state, even if it's just an empty object in order to prevent errors!
+	// 	//In this instance, we need a value for our variable, specifically a string value for our url. Lets just go with zero!
+	// 	return { dotColorUrl: ""};
+	// },
+	componentWillMount(){
 		//Component will mount only runs once, since the dots will redirect to the same page, well, we only need to mount, not remount, or update ;)
 		//It's sometimes nice not to have to make an AJAX call, or count for that matter, just refresh
 
@@ -42,8 +48,8 @@ var Dots = React.createClass({
 			dotColorUrl : dotImgUrlString
 		});
 
-	},
-	render: function() {
+	}
+	render() {
 		return (
 			<div className="dots-page">
 				<h2>Go go go</h2>
@@ -52,6 +58,6 @@ var Dots = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
-module.exports = Dots;
+export default Dots;
