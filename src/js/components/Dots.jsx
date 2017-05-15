@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, browserHistory } from 'react-router';
 // Don't forget your link if you want to create a constant hyperlink!
+import RandomNum from './Modules/random_num';
 
 
 class Dots extends Component{
@@ -20,32 +21,11 @@ class Dots extends Component{
 		//It's sometimes nice not to have to make an AJAX call, or count for that matter, just refresh
 
 
-		//The point of the dots page is to have a random dot color on the screen, what better way than a random
-		//number generator! With values between 0-2, aka three possible values
-		//Don't forget to trunc, rounds down to the nearest integer!
-		var randomNumForColors = Math.floor(Math.random() * 3);
-		var nameOfColor = "";
-		var dotImgUrlString = "";
-
-		//Here we set the color names! Our img urls are only different via the name of the color dot
-		if(randomNumForColors == 0){
-			nameOfColor = "red";
-		}
-
-		else if(randomNumForColors == 1){
-			nameOfColor = "green";
-		}
-
-		else{
-			nameOfColor = "blue";
-		}
-
-		dotImgUrlString = "/files/imgs/" + nameOfColor + "_dot.jpg";
-		console.log(dotImgUrlString, "img url string");
+		var dotStringUrl = RandomNum.colorOfDot()
 
 		//Once we have our value, let's set it in our state!
 		this.setState({
-			dotColorUrl : dotImgUrlString
+			dotColorUrl : dotStringUrl
 		});
 
 	}
@@ -61,7 +41,9 @@ class Dots extends Component{
 			<div className="dots-page">
 				<h2>Go go go</h2>
 				<h3>Click the Dot!</h3>
-				<a href="/dots"><img src={this.state.dotColorUrl} alt="big dot"/></a>
+				<div className="container">
+					<a href="/dots" className="pos1"><img src={this.state.dotColorUrl} alt="big dot"/></a>
+				</div>
 			</div>
 		);
 	}
