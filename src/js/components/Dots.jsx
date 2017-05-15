@@ -42,8 +42,10 @@ class Dots extends Component{
 	render() {
 		return (
 			<div className="dots-page">
-				<h2>Go go go</h2>
-				<h3>Click the Dot!</h3>
+				<header className="dots-header">
+					<h2 className="left">Go go go</h2>
+					<h2 className="right">Click the Dot!</h2>
+				</header>
 				<section className="container">
 					<div className={this.state.dotPosition}>
 						<a href="/dots" className="dot"><img src={this.state.dotColorUrl} alt="big dot"/></a>

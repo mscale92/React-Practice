@@ -6,16 +6,73 @@ html{box-sizing:border-box;}*,*:before,*:after{box-sizing:inherit;}
 
 
 body{
-	background: orange;
+	background: #f9d5e5;
+	margin: 0 5rem;
 }
 
+body a{
+	text-decoration: none;
+	color: white;
+}
+
+body #app{
+	height: 100vh;
+}
+
+/*App.js styles*/
 .main-page{
-	background: blue;
+	background:  #e06377;
+	height: inherit;
 }
 
-.dots-page{
-	background: pink;
+.main-page .main-header {
+	text-align: center;
+	padding: 3rem 0;
 }
+
+
+/*WelcomePage styles*/
+
+
+
+/*Dots page styles*/
+.dots-page{
+	background: white;
+}
+
+.dots-page .dots-header {
+	color: #eeac99;
+
+	width: inherit;
+	display: flex;
+	justify-content: space-around;
+}
+
+/*Button styles*/
+
+.main-button{
+	display: flex;
+    justify-content: center;
+}
+
+.main-button button{
+	font-size: 2rem;
+    box-shadow: 0 0 10px #eeac99;
+    border: white;
+	border-radius: 4%;
+	background: white;
+	color: #e06377;
+}
+
+.main-button button:hover{
+	background: #eeac99;
+	color: white;
+	cursor: pointer;
+	border: #eeac99;
+}
+
+
+/*Grid is below*/
 
 /*The dot anchor containers our img, we'd like the image to be center*/
 

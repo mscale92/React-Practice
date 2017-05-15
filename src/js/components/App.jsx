@@ -40,7 +40,8 @@ class App extends Component{
         return (
             <div className="main-page">
                 <header className="main-header">
-                    <h1>Lots of Dots</h1>
+                    <Link to="/"><h1>Lots of Dots</h1>
+                    </Link>
                 </header>
                 <main className="main-content">
 
