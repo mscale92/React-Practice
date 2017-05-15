@@ -1,9 +1,9 @@
-var React = require('react');
-var Link = require('react-router').Link;
+import React, { Component } from 'react';
+import { Link } from 'react-router';
 // Don't forget your link if you want to create a constant hyperlink!
 
 
-class Dots extends Component {
+class Dots extends Component{
 	constructor(props) {
     	super(props);
     	this.state = {
